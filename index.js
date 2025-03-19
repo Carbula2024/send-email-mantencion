@@ -35,7 +35,7 @@ app.post('/send-email', async (req, res) => {
 
   const mailOptions = {
     from: process.env.GMAIL_USER,
-    to: 'ju.alvareze@gmail.com',
+    to: `carbulamantenciones@gmail.com, ${email}`,
     subject: 'Nueva solicitud de mantención',
     text: `
       Nueva solicitud de mantención:
