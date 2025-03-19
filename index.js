@@ -49,7 +49,7 @@ app.post('/send-email', async (req, res) => {
       - Patente: ${matricula}
       - Kilómetros: ${kms}
       - Talla: ${talla}
-      - Inspección: ${inspeccion}
+      - Inspección: ${inspeccion !== undefined ? (inspeccion ? 'Sí' : 'No') : 'No proporcionado'}
     `,
     html: `
       <h1>Nueva solicitud de mantención</h1>
@@ -64,7 +64,7 @@ app.post('/send-email', async (req, res) => {
         <li><strong>Patente:</strong> ${matricula}</li>
         <li><strong>Kilómetros:</strong> ${kms}</li>
         <li><strong>Talla:</strong> ${talla}</li>
-        <li><strong>Inspección:</strong> ${inspeccion}</li>
+        <li><strong>Inspección:</strong> ${inspeccion !== undefined ? (inspeccion ? 'Sí' : 'No') : 'No proporcionado'}</li>
       </ul>
     `,
   };
