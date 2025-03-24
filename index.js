@@ -12,7 +12,7 @@ app.use(express.json());
 
 // Endpoint dedicado a mantener la API activa
 app.get("/health", (req, res) => {
-  res.status(200).send("API está activa y funcionando");
+  res.status(200).send("OK");
 });
 
 
