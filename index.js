@@ -10,6 +10,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Endpoint dedicado a mantener la API activa
+app.get("/health", (req, res) => {
+  res.status(200).send("API está activa y funcionando");
+});
+
+
 app.post('/send-email', async (req, res) => {
   const {
     name,
